@@ -1,6 +1,6 @@
 import streamlit as st
-#st.subheader("Hydraulicien / Geomaticien")
-
+st.subheader("Hydraulicien / Geomaticien")
+st.title("MERCI")
 st.markdown("""je suis Techicien Supérieur en suivie Technique et Gestion des Ouvrages Hydrauliques ,doter de compétences en Diagnostique et réhabilitation des réseaux AEP, réalisation des aouvraces hydrauliques en béton armé mais aussi en réalisation des ouvrages de Stockages.Je suis aussi specialiste en géomatique avec la Maîtrise des Outils SIG Systèmes d'Information Géographique""")
 
 st.header("📚Formations")
