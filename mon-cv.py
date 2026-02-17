@@ -55,7 +55,7 @@ with st.sidebar:
 st.title("Technicien Supérieur Hydraulicien & Géomaticien")
 st.markdown("""
 <div class="content-box">
-    Expert de la gestion patrimoniale des réseaux hydrauliques, je sécurise la durabilité des infrastructures par le diagnostic de précision, 
+    Je suis expert en gestion patrimoniale des réseaux hydrauliques, je sécurise la durabilité des infrastructures par le diagnostic de précision, 
     la réhabilitation stratégique et la maîtrise des SIG. Alliant rigueur du béton armé et puissance de l'analyse spatiale, 
     j'optimise l'exploitation et le stockage des ressources en eau.
 </div>
