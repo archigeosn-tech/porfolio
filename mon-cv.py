@@ -28,7 +28,7 @@ st.markdown("""
 
     /* Style de la barre latérale */
     [data-testid="stSidebar"] {
-        background-color: rgba(0, 31, 63, 0.9);
+        background-color: rgba(#001f3f);
         border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
     
