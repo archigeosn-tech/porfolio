@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Configuration de la page
-st.set_page_config(page_title="Portfolio | Fallou DIATTA", layout="wide")
+st.set_page_config(page_title="Portfolio | Fallou DIATTA", page_icon="🌊", layout="wide")
 
 # --- STYLE CSS PERSONNALISÉ (Fond Bleu Nuit Dégradé) ---
 st.markdown("""
