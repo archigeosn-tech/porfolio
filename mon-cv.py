@@ -43,7 +43,7 @@ st.markdown("""
 # --- SIDEBAR (Infos de contact) ---
 with st.sidebar:
     st.markdown("<h2 style='text-align: center;'>📍 Contact</h2>", unsafe_allow_html=True)
-    st.image("FD.png", width=150)
+    st.image("FD.png", width=100)
     st.write("👤 **Fallou DIATTA**")
     st.write("🏠 Dakar, Sénégal")
     st.write("📧 [archigeosn@gmail.com](mailto:archigeosn@gmail.com)")
