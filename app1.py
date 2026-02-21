@@ -1,7 +1,7 @@
 import streamlit as st
 
 # --- CONFIGURATION DE LA PAGE ---
-st.set_page_config(page_title="ARCHIGEO | Devis en Temps Réel", page_icon="🏛️", layout="wide")
+st.set_page_config(page_title="ARCHIGEO.SN", page_icon="🏛️", layout="wide")
 
 # --- PARAMÈTRE DE PRIX ---
 PRIX_PAR_M2 = 1500  # 1500 FCFA / m²
