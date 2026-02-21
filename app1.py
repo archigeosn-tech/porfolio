@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="ARCHIGEO | Devis en Temps Réel", page_icon="🏛️", layout="wide")
 
 # --- PARAMÈTRE DE PRIX ---
-PRIX_PAR_M2 = 1500  # 10.000 FCFA / m²
+PRIX_PAR_M2 = 1500  # 1500 FCFA / m²
 
 # --- STYLE CSS (BLEU CIEL & GOLD ROYAL) ---
 st.markdown("""
@@ -72,7 +72,7 @@ villas = [
 # --- BARRE LATÉRALE ---
 with st.sidebar:
     st.markdown("<h1 style='text-align: center; color: #D4AF37;'>ARCHIGEO.SN</h1>", unsafe_allow_html=True)
-    st.image("google.jpg", width=120)
+    st.image("google.jpg", width=200)
     st.markdown("---")
     
     st.subheader("🔍Voir les Projets")
