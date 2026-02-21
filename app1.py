@@ -127,10 +127,9 @@ with st.sidebar:
     
     st.subheader("🔍Voir les Projets")
     f_style = st.selectbox("Style d'architecture", ["Tous", "Moderne", "Traditionnel"])
-    
-    st.markdown("### 📞 Contactez moi")
-    st.info(f"**Tarif Standard :** \n{PRIX_PAR_M2:,} FCFA / m²".replace(',', ' '))
-    st.write("👤 **Fallou DIATTA**")
+    st.markdown("### 📞 Contactez Nous")
+    st.info(f"**Tarif :** \n{PRIX_PAR_M2:,} FCFA / m²".replace(',', ' '))
+    st.write("👤 **Fallou**")
     st.write("📍 Dakar, Sénégal")
     st.write("📧 [archigeosn@gmail.com](mailto:archigeosn@gmail.com)")
     st.write("📞 +221 77 238 99 68")
