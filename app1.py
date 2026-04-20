@@ -185,7 +185,7 @@ for idx, v in enumerate(filtered):
                     with st.spinner("Envoi en cours..."):
                         succès = envoyer_email(nom, mail, tel, v['nom'], v['surface'], prix_total)
                         if succès:
-                            st.success("C'est envoyé ! Fallou vous contactera très vite.")
+                            st.success("C'est envoyé ! Archigeosn vous contactera très vite.")
                             st.balloons()
                 else:
                     st.error("Veuillez remplir tous les champs.")
