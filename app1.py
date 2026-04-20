@@ -196,9 +196,9 @@ EMAIL_PASSWORD = st.secrets["Ahmad1234"]
 EMAIL_ENVOI = st.secrets["archigeosn@gmail.com"]
 
 # Ensuite, votre fonction reste la même :
-df.envoyer_email(nom_client, email_client, telephone, nom_villa, surface, prix):
+df.envoyer_email(nom_client, email_client, telephone, nom_villa, surface, prix)
     # ... le reste du code ...
-    server.login(EMAIL_ENVOI, EMAIL_PASSWORD)
+server.login(EMAIL_ENVOI, EMAIL_PASSWORD)
     # ...
 # --- FOOTER ---
 st.markdown("<br><p style='text-align: center; opacity: 0.7;'>ARCHIGEO | L'art de bâtir</p>", unsafe_allow_html=True)
