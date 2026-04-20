@@ -196,7 +196,7 @@ EMAIL_PASSWORD = st.secrets["Ahmad1234"]
 EMAIL_ENVOI = st.secrets["archigeosn@gmail.com"]
 
 # Ensuite, votre fonction reste la même :
-def envoyer_email(nom_client, email_client, telephone, nom_villa, surface, prix):
+envoyer_email(nom_client, email_client, telephone, nom_villa, surface, prix):
     # ... le reste du code ...
     server.login(EMAIL_ENVOI, EMAIL_PASSWORD)
     # ...
