@@ -183,7 +183,7 @@ for idx, v in enumerate(filtered):
             if st.button("Confirmer l'envoi", key=f"send_{idx}"):
                 if nom and mail and tel:
                     with st.spinner("Envoi en cours..."):
-                        succès = def envoyer_email(nom, mail, tel, v['nom'], v['surface'], prix_total)
+                        succès =envoyer_email(nom, mail, tel, v['nom'], v['surface'], prix_total)
                         if succès:
                             st.success("C'est envoyé ! Archigeosn vous contactera très vite.")
                             st.balloons()
