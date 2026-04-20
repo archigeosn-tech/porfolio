@@ -111,6 +111,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+
 # --- DONNÉES DES VILLAS (Surfaces modifiées pour le calcul) ---
 villas = [
     {"nom": "Villa Horizon", "image": "ARCHIGEO3D.jpg", "surface": 250, "style": "Moderne"},
@@ -127,9 +128,11 @@ with st.sidebar:
     
     st.subheader("🔍Voir les Projets")
     f_style = st.selectbox("Style d'architecture", ["Tous", "Moderne", "Traditionnel"])
-    st.markdown("### 📞 Contactez Nous")
-    st.info(f"**Tarif :** \n{PRIX_PAR_M2:,} FCFA / m²".replace(',', ' '))
-    st.write("👤 **Fallou**")
+    
+    st.markdown("---")
+    st.markdown("### 📞 Contact Direct")
+    st.info(f"**Tarif Standard :** \n{PRIX_PAR_M2:,} FCFA / m²".replace(',', ' '))
+    st.write("👤 **Fallou DIATTA**")
     st.write("📍 Dakar, Sénégal")
     st.write("📧 [archigeosn@gmail.com](mailto:archigeosn@gmail.com)")
     st.write("📞 +221 77 238 99 68")
@@ -167,6 +170,26 @@ for idx, v in enumerate(filtered):
             st.success(f"Demande pour la {v['nom']} reçue ! Nous vous recontacterons.")
             st.balloons()
             
+        st.markdown('</div>', unsafe_allow_html=True)
+
+
+        # --- FORMULAIRE DE CONTACT DANS UN POPOVER ---
+        with st.popover(f"📩 Demander le plan"):
+            st.write(f"Envoyer une demande pour : **{v['nom']}**")
+            nom = st.text_input("Nom Complet", key=f"nom_{idx}")
+            mail = st.text_input("Votre Email", key=f"mail_{idx}")
+            tel = st.text_input("Numéro WhatsApp", key=f"tel_{idx}")
+            
+            if st.button("Confirmer l'envoi", key=f"send_{idx}"):
+                if nom and mail and tel:
+                    with st.spinner("Envoi en cours..."):
+                        succès = envoyer_email(nom, mail, tel, v['nom'], v['surface'], prix_total)
+                        if succès:
+                            st.success("C'est envoyé ! Fallou vous contactera très vite.")
+                            st.balloons()
+                else:
+                    st.error("Veuillez remplir tous les champs.")
+        
         st.markdown('</div>', unsafe_allow_html=True)
 
 # --- FOOTER ---
