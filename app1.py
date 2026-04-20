@@ -192,7 +192,7 @@ for idx, v in enumerate(filtered):
         
         st.markdown('</div>', unsafe_allow_html=True)
 # Au lieu de mettre le texte en clair, on appelle le secret
-EMAIL_PASSWORD = st.secrets["Ahmad1234"]
+EMAIL_PASSWORD = st.secrets["dgfffffh"]
 EMAIL_ENVOI = st.secrets["archigeosn@gmail.com"]
 
 # Ensuite, votre fonction reste la même :
