@@ -191,6 +191,14 @@ for idx, v in enumerate(filtered):
                     st.error("Veuillez remplir tous les champs.")
         
         st.markdown('</div>', unsafe_allow_html=True)
+# Au lieu de mettre le texte en clair, on appelle le secret
+EMAIL_PASSWORD = st.secrets["EMAIL_PASSWORD"]
+EMAIL_ENVOI = st.secrets["EMAIL_SENDER"]
 
+# Ensuite, votre fonction reste la même :
+def envoyer_email(nom_client, email_client, telephone, nom_villa, surface, prix):
+    # ... le reste du code ...
+    server.login(EMAIL_ENVOI, EMAIL_PASSWORD)
+    # ...
 # --- FOOTER ---
 st.markdown("<br><p style='text-align: center; opacity: 0.7;'>ARCHIGEO | L'art de bâtir</p>", unsafe_allow_html=True)
