@@ -373,7 +373,7 @@ with tab_edu:
         <div class="card-item">
             <div class="card-title">Diplôme de Technicien Supérieur (DTS)</div>
             <div class="card-subtitle">🏛️ ISEP-Thiès | Spécialité Hydraulique</div>
-            <p><strong>Option :</strong> Suivi Technique et Gestion des Ouvrages Hydrauliques</p>
+            <p><strong>Option :</strong> Eau ,Infrastructure et Assainnissement Suivi Technique et Gestion des Ouvrages Hydrauliques</p>
         </div>
         """, unsafe_allow_html=True)
 
