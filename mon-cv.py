@@ -197,7 +197,7 @@ with st.sidebar:
                 👨‍💻
             </div>
             <h2 style="color: #d4af37; margin-top: 12px; margin-bottom: 2px; font-size: 1.5rem;">Fallou DIATTA</h2>
-            <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien & Géomaticien</p>
+            <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien /Géomaticien/Topographe</p>
         </div>
     """, unsafe_allow_html=True)
 
@@ -216,7 +216,7 @@ with st.sidebar:
     st.markdown("""
     * 🇫🇷 **Français :** Courant
     * 🇬🇧 **Anglais :** Technique
-    * 💻 **Outils Clés :** QGIS, ArcMap, Streamlit, AutoCAD, SketchUp, RSA
+    * 💻 **Outils Clés :** QGIS, ArcMap, Streamlit, AutoCAD, SketchUp
     """)
 
 # -----------------------------------------------------------------------------
