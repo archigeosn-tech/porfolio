@@ -190,11 +190,19 @@ st.markdown("""
 # -----------------------------------------------------------------------------
 # 3. SIDEBAR (PROFIL & CONTACT)
 # -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# 3. SIDEBAR (PROFIL & CONTACT)
+# -----------------------------------------------------------------------------
 with st.sidebar:
+    # Conteneur pour centrer la photo et le texte
+    col_center1, col_center2, col_center3 = st.columns([1, 2, 1])
+    with col_center2:
+        # Affichage de ta photo de CV
+        st.image("FD.png", use_container_width=True)
+
     st.markdown("""
-        <div style="text-align: center; padding-top: 10px;">
-            <img src="app/static/FD.png" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; box-shadow: 0 4px 20px rgba(56,189,248,0.3);">
-            <h2 style="color: #d4af37; margin-top: 12px; margin-bottom: 2px; font-size: 1.5rem;">Fallou DIATTA</h2>
+        <div style="text-align: center;">
+            <h2 style="color: #d4af37; margin-top: 10px; margin-bottom: 2px; font-size: 1.5rem;">Fallou DIATTA</h2>
             <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien & Géomaticien</p>
         </div>
     """, unsafe_allow_html=True)
