@@ -4,40 +4,46 @@ import streamlit as st
 # 1. PAGE CONFIGURATION
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="CV - Fallou DIATTA | Hydraulicien | Géomaticien| Géomètre | Topographe",
+    page_title="CV - Fallou DIATTA | Hydraulicien & Géomaticien",
     page_icon="🌊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # -----------------------------------------------------------------------------
-# 2. CUSTOM CSS STYLING (THEME: NAVY BLUE & ROYAL GOLD)
+# 2. CUSTOM CSS STYLING (THEME: BLEU CIEL & DORÉ)
 # -----------------------------------------------------------------------------
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
 
     :root {
-        --bg-dark: #0a1128;
-        --card-bg: #111d4a;
-        --card-bg-hover: #1c2d6b;
+        --bg-dark: #05111e;
+        --card-bg: #0a1e36;
+        --card-bg-hover: #102a4c;
+        
+        /* COULEURS PRINCIPALES : DORÉ & BLEU CIEL */
         --gold-primary: #d4af37;
         --gold-light: #f3e5ab;
-        --gold-accent: #ffb703;
-        --blue-accent: #00b4d8;
+        --gold-glow: rgba(212, 175, 55, 0.35);
+        
+        --sky-blue: #38bdf8;        /* Bleu ciel lumineux */
+        --sky-blue-light: #bae6fd;  /* Bleu ciel doux */
+        --sky-blue-glow: rgba(56, 189, 248, 0.25);
+        
         --text-bright: #ffffff;
         --text-sub: #cbd5e1;
     }
 
     .stApp {
-        background: linear-gradient(135deg, #060b1e 0%, #0a1128 50%, #101b3b 100%);
+        background: linear-gradient(135deg, #030a14 0%, #061527 50%, #0a1e36 100%);
         color: var(--text-sub);
         font-family: 'Poppins', sans-serif;
     }
 
     [data-testid="stSidebar"] {
-        background-color: #040817 !important;
-        border-right: 2px solid var(--gold-primary);
+        background-color: #020710 !important;
+        border-right: 2px solid var(--sky-blue);
     }
 
     h1, h2, h3, h4 {
@@ -51,25 +57,26 @@ st.markdown("""
         letter-spacing: 1.5px;
         text-transform: uppercase;
         margin-bottom: 0px;
-        text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        text-shadow: 0 2px 12px var(--gold-glow);
     }
 
     .header-title {
-        color: var(--blue-accent);
-        font-size: 1.4rem;
+        color: var(--sky-blue);
+        font-size: 1.35rem;
         font-weight: 600;
         margin-top: -5px;
         margin-bottom: 20px;
+        text-shadow: 0 0 10px var(--sky-blue-glow);
     }
 
     .summary-box {
-        background: linear-gradient(135deg, rgba(17, 29, 74, 0.8) 0%, rgba(10, 17, 40, 0.9) 100%);
+        background: linear-gradient(135deg, rgba(10, 30, 54, 0.85) 0%, rgba(5, 17, 30, 0.95) 100%);
         border: 1px solid var(--gold-primary);
-        border-left: 6px solid var(--gold-primary);
+        border-left: 6px solid var(--sky-blue);
         border-radius: 12px;
         padding: 22px;
         margin-bottom: 25px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         line-height: 1.7;
         color: var(--text-bright);
         font-size: 1.05rem;
@@ -77,18 +84,18 @@ st.markdown("""
 
     .card-item {
         background-color: var(--card-bg);
-        border: 1px solid rgba(212, 175, 55, 0.25);
+        border: 1px solid rgba(56, 189, 248, 0.25);
         border-radius: 12px;
         padding: 22px;
         margin-bottom: 18px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.4);
         transition: all 0.3s ease-in-out;
     }
 
     .card-item:hover {
         border-color: var(--gold-primary);
         transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+        box-shadow: 0 10px 25px var(--gold-glow);
     }
 
     .card-title {
@@ -99,14 +106,15 @@ st.markdown("""
     }
 
     .card-subtitle {
-        color: var(--blue-accent);
+        color: var(--sky-blue);
         font-size: 0.95rem;
         font-weight: 600;
         margin-bottom: 12px;
     }
 
+    /* BADGES HARMONISÉS EN BLEU CIEL & DORÉ */
     .gold-badge {
-        background: rgba(212, 175, 55, 0.12);
+        background: rgba(212, 175, 55, 0.15);
         color: var(--gold-light);
         border: 1px solid var(--gold-primary);
         padding: 6px 14px;
@@ -118,9 +126,9 @@ st.markdown("""
     }
 
     .blue-badge {
-        background: rgba(0, 180, 216, 0.12);
-        color: var(--blue-accent);
-        border: 1px solid var(--blue-accent);
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--sky-blue-light);
+        border: 1px solid var(--sky-blue);
         padding: 6px 14px;
         border-radius: 20px;
         font-size: 0.85rem;
@@ -130,12 +138,12 @@ st.markdown("""
     }
 
     .metric-card {
-        background: linear-gradient(145deg, #111d4a, #0a1128);
-        border: 1px solid var(--gold-primary);
+        background: linear-gradient(145deg, #0a1e36, #05111e);
+        border: 1px solid var(--sky-blue);
         border-radius: 12px;
         padding: 16px;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
     .metric-number {
@@ -145,7 +153,7 @@ st.markdown("""
     }
 
     .metric-label {
-        color: var(--text-sub);
+        color: var(--sky-blue-light);
         font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -153,7 +161,7 @@ st.markdown("""
 
     .gold-divider {
         height: 2px;
-        background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+        background: linear-gradient(90deg, transparent, var(--sky-blue), var(--gold-primary), transparent);
         margin: 25px 0;
     }
 
@@ -162,19 +170,19 @@ st.markdown("""
     }
 
     .stTabs [data-baseweb="tab"] {
-        background-color: rgba(17, 29, 74, 0.6);
+        background-color: rgba(10, 30, 54, 0.7);
         border-radius: 8px 8px 0 0;
         color: var(--text-sub);
-        border: 1px solid rgba(212, 175, 55, 0.2);
+        border: 1px solid rgba(56, 189, 248, 0.2);
         padding: 10px 20px;
         font-weight: 600;
     }
 
     .stTabs [aria-selected="true"] {
         background-color: var(--card-bg) !important;
-        color: var(--gold-primary) !important;
+        color: var(--sky-blue) !important;
         border-bottom: 3px solid var(--gold-primary) !important;
-        border-top: 1px solid var(--gold-primary) !important;
+        border-top: 1px solid var(--sky-blue) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -185,11 +193,11 @@ st.markdown("""
 with st.sidebar:
     st.markdown("""
         <div style="text-align: center; padding-top: 10px;">
-            <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #00b4d8); margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 50px; shadow: 0 4px 15px rgba(212,175,55,0.4);">
+            <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #38bdf8); margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 50px; box-shadow: 0 4px 20px rgba(56,189,248,0.3);">
                 👨‍💻
             </div>
             <h2 style="color: #d4af37; margin-top: 12px; margin-bottom: 2px; font-size: 1.5rem;">Fallou DIATTA</h2>
-            <p style="color: #00b4d8; font-size: 0.9rem; font-weight: 600;">Hydraulicien & Géomaticien</p>
+            <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien & Géomaticien</p>
         </div>
     """, unsafe_allow_html=True)
 
@@ -215,15 +223,13 @@ with st.sidebar:
 # 4. MAIN CONTENT
 # -----------------------------------------------------------------------------
 st.markdown('<div class="header-name">Fallou DIATTA</div>', unsafe_allow_html=True)
-st.markdown('<div class="header-title">Technicien Supérieur Hydraulicien & Géomaticien</div>', unsafe_allow_html=True)
+st.markdown('<div class="header-title">Technicien Supérieur en Hydraulique & Géomaticien / Géomètre / Topographe</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="summary-box">
-    <strong>✨ Profil Professionnel :</strong><br>
-    Expert de la gestion patrimoniale des réseaux hydrauliques, du diagnostic géotechnique et des analyses spatiales, 
-    je sécurise la durabilité des infrastructures par la précision cartographique (WebGIS, SIG), l'ingénierie des ouvrages 
-    et la modélisation 3D/photogrammétrique. Alliant la rigueur du béton armé, les études de sol et la puissance du 
-    développement géospatial, j'optimise l'exploitation, le suivi du territoire et la gestion durable des ressources en eau.
+    <strong style="color:#38bdf8;">✨ Profil Professionnel :</strong><br>
+    Géomètre-Topographe, Hydraulicien & Concepteur de Solutions Spatiales.<br>
+    Passionné par l'aménagement du territoire et le bâtiment, j'allie la rigueur des levés de terrain à la puissance de la cartographie numérique et du WebGIS. De la modélisation de plans d'architecture résidentielle au dimensionnement des réseaux d'eau potable et à l'étude des sols, je transforme les données terrain en outils de décision fiables et durables.
 </div>
 """, unsafe_allow_html=True)
 
@@ -267,7 +273,7 @@ tab_exp, tab_comp, tab_edu = st.tabs([
 
 # TAB 1: EXPÉRIENCES
 with tab_exp:
-    st.markdown("<h3 style='color:#d4af37;'>Parcours en Entreprise</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#38bdf8;'>Parcours en Entreprise</h3>", unsafe_allow_html=True)
     
     st.markdown("""
     <div class="card-item">
@@ -306,13 +312,13 @@ with tab_exp:
 
 # TAB 2: COMPÉTENCES
 with tab_comp:
-    st.markdown("<h3 style='color:#d4af37;'>Expertise Technique</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#38bdf8;'>Expertise Technique</h3>", unsafe_allow_html=True)
     col_c1, col_c2, col_c3 = st.columns(3)
 
     with col_c1:
         st.markdown("""
         <div class="card-item" style="height: 100%;">
-            <h4 style="color:#00b4d8; margin-top:0;">🌐 Géomatique & WebGIS</h4>
+            <h4 style="color:#38bdf8; margin-top:0;">🌐 Géomatique & WebGIS</h4>
             <ul>
                 <li>QGIS & ArcMap (Traitement avancé)</li>
                 <li>Python Spatiale (GeoPandas, Folium, Rasterio)</li>
@@ -326,7 +332,7 @@ with tab_comp:
     with col_c2:
         st.markdown("""
         <div class="card-item" style="height: 100%;">
-            <h4 style="color:#00b4d8; margin-top:0;">💧 Hydraulique & Géotechnique</h4>
+            <h4 style="color:#38bdf8; margin-top:0;">💧 Hydraulique & Géotechnique</h4>
             <ul>
                 <li>Dimensionnement réseaux AEP & Surface libre</li>
                 <li>Diagnostic d'ouvrages & Réduction de fuites</li>
@@ -340,7 +346,7 @@ with tab_comp:
     with col_c3:
         st.markdown("""
         <div class="card-item" style="height: 100%;">
-            <h4 style="color:#00b4d8; margin-top:0;">🏗️ DAO, 3D & Structures</h4>
+            <h4 style="color:#38bdf8; margin-top:0;">🏗️ DAO, 3D & Structures</h4>
             <ul>
                 <li>AutoCAD (Plans 2D)</li>
                 <li>SketchUp (Modélisation 3D)</li>
@@ -353,7 +359,7 @@ with tab_comp:
 
 # TAB 3: FORMATIONS
 with tab_edu:
-    st.markdown("<h3 style='color:#d4af37;'>Diplômes & Titres Académiques</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#38bdf8;'>Diplômes & Titres Académiques</h3>", unsafe_allow_html=True)
     col_e1, col_e2 = st.columns(2)
 
     with col_e1:
@@ -370,13 +376,13 @@ with tab_edu:
         <div class="card-item">
             <div class="card-title">Brevet de Technicien Supérieur (BTS)</div>
             <div class="card-subtitle">🏛️ CEDT Le G15 - Dakar | Spécialité Géomatique</div>
-            <p><strong>Option :</strong> Système d'Information Géographique & Topographie</p>
+            <p><strong>Option :</strong> Analyste spatiale, Aménagement du territoire & Topographie</p>
         </div>
         """, unsafe_allow_html=True)
 
 st.markdown('<div class="gold-divider"></div>', unsafe_allow_html=True)
 st.markdown("""
-<div style="text-align: center; color: #8892b0; font-size: 0.85rem; padding-bottom: 20px;">
-    © Fallou DIATTA — Technicien Supérieur Hydraulicien & Géomaticien
+<div style="text-align: center; color: #cbd5e1; font-size: 0.85rem; padding-bottom: 20px;">
+    © Fallou DIATTA — Hydraulicien | Géomaticien | Géomètre | Topographe
 </div>
 """, unsafe_allow_html=True)
