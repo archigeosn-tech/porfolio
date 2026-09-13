@@ -193,11 +193,9 @@ st.markdown("""
 with st.sidebar:
     st.markdown("""
         <div style="text-align: center; padding-top: 10px;">
-            <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #38bdf8); margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 50px; box-shadow: 0 4px 20px rgba(56,189,248,0.3);">
-                👨‍💻
-            </div>
+            <img src="app/static/FD.png" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; box-shadow: 0 4px 20px rgba(56,189,248,0.3);">
             <h2 style="color: #d4af37; margin-top: 12px; margin-bottom: 2px; font-size: 1.5rem;">Fallou DIATTA</h2>
-            <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien /Géomaticien/Topographe</p>
+            <p style="color: #38bdf8; font-size: 0.9rem; font-weight: 600;">Hydraulicien & Géomaticien</p>
         </div>
     """, unsafe_allow_html=True)
 
